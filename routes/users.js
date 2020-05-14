@@ -10,10 +10,10 @@ router.get('/', function(req, res, next) {
         if(err) {
             req.flash('error', err);
             // render to views/users/index.ejs
-            res.render('users',{data:''});
+            res.render('users',{data:'', title: 'Users'});
         } else {
             // render to views/users/index.ejs
-            res.render('users',{data:rows});
+            res.render('users',{data:rows, title: 'Users'});
         }
     });
 });

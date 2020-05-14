@@ -5,7 +5,31 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Users</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    </head>
+    <body class="container" style="margin-top: 50px;">    
+        <div class="card">
+            <div class="card-header">
+                <ul class="nav nav-pills w-100">
+                    <li class="nav-pill active">
+                        <a class="nav-link"><%= title %></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="container h-100">
+              <div class="row h-100 justify-content-center align-items-center">
+                <div class="col-6">
+                  <a class="nav-link active" href="/users">User</a>
+                  <a class="nav-link active" href="/products">Product</a>
+                </div>   
+              </div>  
+            </div>
+    </body>
+    </html>
   </body>
 </html>
