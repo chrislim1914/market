@@ -22,6 +22,9 @@
                 <li class="nav-pill active">
                     <a class="nav-link"><%= title %> Management</a>
                 </li>
+                <li class="nav-pill ml-auto">
+                    <a class="nav-link active" href="/">Back</a>
+                </li>
             </ul>
         </div>
     <div class="card-body">
@@ -30,19 +33,21 @@
         <table class="table">
             <thead>
                 <tr>
+                    <th scope="col">#</th>
                     <th scope="col">ID</th>
                     <th scope="col">Name</th>
-                    <th scope="col">Action</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Product</th>
                 </tr>
             </thead>
             <tbody>
             <% for(var i = 0; i< data.length; i++) { %>
                 <tr>
-                    <th scope="row"><%= data[i].idproduct %></th>
+                    <th scope="row"><%= i + 1 %></th>
+                    <th><%= data[i].id %></th>
+                    <td><%= data[i].name%></td>
+                    <td><%= data[i].email%></td>
                     <td><%= data[i].productname%></td>
-                    <td>
-                    <a class="btn btn-success edit" href="../products/match/<%=data[i].idproduct%>">View</a>
-                    </td>
                 </tr>
             <% } %>
             </tbody>
